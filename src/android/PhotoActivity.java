@@ -121,7 +121,9 @@ public class PhotoActivity extends Activity {
                     }
                 }
 
-                Uri imageUri;
+                photo.setRotation(photo.getRotation() - 90f);
+                
+                /* Uri imageUri;
                 if (mTempImage == null) {
                     mTempImage = getLocalBitmapFileFromView(photo);
                 }
@@ -135,7 +137,7 @@ public class PhotoActivity extends Activity {
                     sharingIntent.putExtra(Intent.EXTRA_STREAM, imageUri);
 
                     startActivity(Intent.createChooser(sharingIntent, "Share"));
-                }
+                } */
             }
         });
 
